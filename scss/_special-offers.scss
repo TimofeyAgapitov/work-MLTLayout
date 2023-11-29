@@ -1,0 +1,75 @@
+.wholesaler {
+  &._special-offers {
+    background-color: #fff;
+    padding-top: 5.3rem;
+    .wholesaler {
+      &__container {
+        padding-bottom: 6.6rem;
+      }
+      &__content {
+        .content {
+          &-left {
+            width: 73.5rem;
+            padding-top: 8.8rem;
+          }
+        }
+      }
+      &__title {
+        color: #121820;
+      }
+      &__text {
+        color: #121820;
+        width: 50rem;
+      }
+      &__btn {
+        color: #121820;
+        &::after {
+          background-image: url('../img/sections/icons/icon-arrow-blue.svg');
+        }
+      }
+      &__img {
+        width: 49.3rem;
+        margin-right: 20rem;
+      }
+    }
+  }
+}
+@media (max-width: 48em) {
+  .wholesaler {
+    &._special-offers {
+      padding-top: 8rem;
+      .wholesaler {
+        &__container {
+          padding-bottom: 8rem;
+        }
+        &__content {
+          .content {
+            &-left {
+              width: 100%;
+              padding-top: 0;
+            }
+          }
+        }
+        &__title {
+        }
+        &__text {
+          width: 100%;
+        }
+        &__btn {
+          &::after {
+            background-image: url('../img/sections/icons/icon-arrow-blue.svg');
+          }
+        }
+        &__img {
+          width: 71rem;
+          height: 62.4rem;
+          margin-right: 0;
+          img {
+            width: 62.4rem;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+.delivery {
+  background-color: #121820;
+  margin-bottom: 0;
+  &__container {
+    padding-bottom: 10rem;
+  }
+  &__head {
+    color: #fff;
+    font-family: Gilroy;
+    font-size: 5.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 105%;
+    margin-bottom: 6rem;
+  }
+  &__content {
+    display: flex;
+    gap: 4rem;
+  }
+  &__element {
+    width: 54.7rem;
+    min-height: 33rem;
+    padding: 3rem;
+    color: #fff;
+    border: 1px solid #7c7c7c;
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+  }
+  &__heading {
+    display: flex;
+    align-items: center;
+    gap: 3.4rem;
+  }
+  &__icon {
+    &._location {
+      width: 4rem;
+      height: 5.4rem;
+    }
+    &._car {
+      width: 5rem;
+    }
+  }
+  &__title {
+    font-family: Gilroy;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 145%;
+    margin-bottom: 0.5rem;
+  }
+  &__subtitle {
+    color: #7c7c7c;
+    font-family: Gilroy;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 145%;
+  }
+  &__text {
+    font-family: Gilroy;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 145%;
+  }
+}
+@media (max-width: 48em) {
+  .delivery {
+    &__head {
+      font-size: 5.4rem;
+      margin-bottom: 6rem;
+    }
+    &__content {
+      flex-direction: column;
+    }
+    &__element {
+      width: 100%;
+      min-height: auto;
+      padding: 6rem;
+      gap: 4rem;
+    }
+    &__heading {
+      gap: 6rem;
+    }
+    &__icon {
+      flex: none;
+      &._location {
+        width: 6rem;
+        height: 8rem;
+      }
+      &._car {
+        width: 8rem;
+      }
+    }
+    &__title {
+      font-size: 3.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    &__subtitle {
+      font-size: 2.6rem;
+    }
+    &__text {
+      font-size: 2.8rem;
+    }
+  }
+}

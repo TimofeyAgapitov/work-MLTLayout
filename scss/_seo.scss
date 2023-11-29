@@ -1,0 +1,126 @@
+.seo {
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+    margin-bottom: 0;
+    background: #121820;
+
+    .container {
+        width: 134.7rem;
+        display: flex;
+        gap: 7.6rem;
+        align-items: flex-end;
+    }
+    &-img {
+        width: 66.6rem;
+        height: 52.3rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &-right {
+        flex: 1;
+
+        &__title {
+            color: #FFF;
+            margin-bottom: 4rem;
+        }
+        &__subtitle {
+            color: rgba(255, 255, 255, 0.80);
+            margin-bottom: 2.4rem;
+        }
+        &__boldtext {
+            color: #FFF;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 145%;
+            position: relative;
+            padding-left: 1.7rem;
+            margin-bottom: 3.2rem;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 1px;
+                background: #FFF;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+        &__text {
+            color: rgba(255, 255, 255, 0.80);
+            margin-bottom: 2.4rem;
+        }
+
+        div:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 48em) {
+    .seo {
+        padding-top: 15rem;
+        padding-bottom: 15rem;
+        background: #121820;
+    
+        .container {
+            width: auto;
+            display: flex;
+            gap: 0;
+            align-items: flex-end;
+            position: relative;
+        }
+        &-img {
+            position: absolute;
+            z-index: 0;
+            width: 52rem;
+            height: 41rem;
+            top: -6rem;
+            right: 2rem;
+    
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &-right {
+            flex: unset;
+    
+            &__title {
+                margin-bottom: 6.4rem;
+            }
+            &__subtitle {
+                margin-bottom: 4rem;
+            }
+            &__boldtext {
+                font-size: 2.8rem;
+                position: relative;
+                padding-left: 3.4rem;
+                margin-bottom: 4rem;
+    
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 1px;
+                    background: #FFF;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+            &__text {
+                margin-bottom: 1.2rem;
+            }
+    
+            div:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

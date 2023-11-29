@@ -1,0 +1,124 @@
+.bestsellers {
+    margin-bottom: 15rem;
+    .title-text {
+        margin-bottom: 6rem;
+    }
+    .container {
+        position: relative;
+    }
+    &-swiper {
+        padding-top: 15rem;
+        margin-top: -15rem;
+    }
+    &-slide {
+        display: flex;
+        flex-direction: column;
+        padding: 3rem;
+
+        &__number {
+            color: #7C7C7C;
+            margin-bottom: 2.8rem;
+        }
+        &__img {
+            width: 16.1rem;
+            height: 22.1rem;
+            margin: 0 auto 5rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: scale-down;
+            }
+        }
+        &-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        &__title {
+            width: 15.5rem;
+        }
+        &__link {
+            color: #7C7C7C;
+        }
+    }
+    &-button-prev, &-button-next {
+        top: 6.2rem;
+
+    }
+    &-button-prev {
+        left: auto;
+        right: 6rem;
+    }
+    &-button-next {
+        right: 0;
+    }
+}
+
+@media (max-width: 48em) {
+    .bestsellers {
+        margin-bottom: 15rem;
+        .title-text {
+            margin-bottom: 6rem;
+        }
+        .container {
+            position: relative;
+        }
+        &-swiper {
+            padding-top: 0;
+            margin-top: 0;
+            .swiper-wrapper {
+                height: 125rem;
+            }
+        }
+        &-slide {
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            height: calc(100% / 2) !important;
+
+            &:nth-child(2n) {
+                border-top: 1px solid rgba(18, 24, 32, 0.20);
+            }
+    
+            &__number {
+                color: #7C7C7C;
+                margin-bottom: 0;
+            }
+            &__img {
+                width: 26.6rem;
+                height: 36rem;
+                margin: 0 auto 4.2rem;
+    
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: scale-down;
+                }
+            }
+            &-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
+            &__title {
+                width: auto;
+                margin-bottom: 4.2rem;
+            }
+            &__link {
+                color: #7C7C7C;
+            }
+        }
+        &-button-prev, &-button-next {
+            top: 2.2rem;
+    
+        }
+        &-button-prev {
+            left: auto;
+            right: 6rem;
+        }
+        &-button-next {
+            right: 0;
+        }
+    }
+}

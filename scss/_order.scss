@@ -1,0 +1,131 @@
+.order {
+    padding-top: 14.4rem;
+    margin-bottom: 14.4rem;
+    .container {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-left {
+        width: 60.2rem;
+
+        &__title {
+            font-family: 'Gotham';
+            font-size: 3.5rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 105%;
+            margin-bottom: 3.2rem;
+        }
+        &__text {
+            width: 49.6rem;
+            margin-bottom: 5.9rem;
+            color: #7C7C7C;
+        }
+        &__form {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .input {
+                font-size: 1.8rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 145%;
+                border: 1px solid #7C7C7C;
+                padding: 1.7rem 2rem;
+                width: 29.7rem;
+            }
+        }
+        &__btn {
+            font-family: 'Gotham';
+            font-size: 2.4rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%;
+            padding-right: 4rem;
+            position: relative;
+
+            &::after {
+                content: '';
+                display: block;
+                background: url(../img/icon/arrow-right.svg) no-repeat;
+                background-size: cover;
+                width: 2.6rem;
+                height: 1.5rem;
+                position: absolute;
+                right: 0;
+                top: 30%;
+
+            }
+        }
+    }
+    &-right {
+        width: 94.0444rem;
+        height: 52.9rem;
+        margin: -14.4rem 0;
+    }
+}
+
+@media (max-width: 48em) {
+    .order {
+        padding-top: 12rem;
+        margin-bottom: 12rem;
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+        &-left {
+            width: auto;
+            margin-bottom: 5.4rem;
+    
+            &__title {
+                font-size: 4.4rem;
+                margin-bottom: 2.4rem;
+            }
+            &__text {
+                width: auto;
+                margin-bottom: 6.4rem;
+            }
+            &__form {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: unset;
+                gap: 4rem;
+    
+                .input {
+                    font-size: 2.6rem;
+                    padding: 3.4rem 4rem;
+                    width: 100%;
+
+                }
+            }
+            &__btn {
+                font-size: 3.6rem;
+                padding-right: 13rem;
+                position: relative;
+                width: fit-content;
+    
+                &::after {
+                    content: '';
+                    display: block;
+                    background: url(../img/icon/arrow-right.svg) no-repeat;
+                    background-size: cover;
+                    width: 5rem;
+                    height: 3rem;
+                    position: absolute;
+                    right: 0;
+                    top: 20%;
+    
+                }
+            }
+        }
+        &-right {
+            width: auto;
+            height: auto;
+            margin: 0;
+        }
+    }
+}

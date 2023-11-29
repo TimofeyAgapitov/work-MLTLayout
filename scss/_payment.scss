@@ -1,0 +1,67 @@
+.payment {
+  background-color: #121820;
+  margin-bottom: 0;
+  &__container {
+    padding-top: 10rem;
+    padding-bottom: 15rem;
+  }
+  &__head {
+    color: #fff;
+    font-family: Gilroy;
+    font-size: 5.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 105%;
+    margin-bottom: 6rem;
+  }
+  &__content {
+    display: flex;
+    gap: 5.5rem;
+  }
+  &__element {
+    width: 53.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    color: #fff;
+  }
+  &__title {
+    font-family: Gilroy;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 145%;
+  }
+  &__text {
+    font-family: Gilroy;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 145%;
+  }
+}
+@media (max-width: 48em) {
+  .payment {
+    &__container {
+      padding-bottom: 12rem;
+    }
+    &__head {
+      font-size: 5.4rem;
+      margin-bottom: 6rem;
+    }
+    &__content {
+      flex-direction: column;
+      gap: 6rem;
+    }
+    &__element {
+      width: 100%;
+      gap: 3rem;
+    }
+    &__title {
+      font-size: 3.2rem;
+    }
+    &__text {
+      font-size: 2.8rem;
+    }
+  }
+}

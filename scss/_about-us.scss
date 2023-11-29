@@ -1,0 +1,155 @@
+.about-us {
+    background: #121820;
+    padding-bottom: 4.5rem;
+    color: #FFF;
+
+    .container {
+        width: auto;
+        display: flex;
+        gap: 4.4rem;
+    }
+    &-left {
+        flex: 1;
+        margin-left: 10rem;
+
+        &__title {
+            margin-bottom: 8rem;
+        }
+        &__img {
+            width: 93.8rem;
+            margin-left: -10rem;
+            margin-bottom: 8rem;
+        }
+        &-container {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 8rem;
+            column-gap: 10rem;
+            width: 55rem;
+        }
+        &__item {
+            width: 21.5rem;
+
+            &-title {
+                margin-bottom: 0.7rem;
+            }
+            &-text {
+                color: #7C7C7C;
+            }
+        }
+    }
+    &-right {
+        flex: 1;
+        margin-right: 10rem;
+
+        &__img {
+            width: 93.8rem;
+            margin-right: -10rem;
+            position: relative;
+
+            &::after {
+                display: block;
+                content: '';
+                background: url(../img/icon/logo-circle.svg) no-repeat;
+                background-size: contain;
+                width: 15rem;
+                height: 15rem;
+                position: absolute;
+                bottom: 0;
+                left: -7.5rem;
+            }
+        }
+        &__text {
+            margin-bottom: 6rem;
+        }
+    }
+}
+
+@media (max-width: 48em) {
+    .about-us {
+        padding-bottom: 20.4rem;
+    
+        .container {
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 6.6rem;
+        }
+        &-left {
+            flex: unset;
+            width: auto;
+            margin-left: 0;
+    
+            &__title {
+                margin-bottom: 2.4rem;
+            }
+            &__text {
+                margin-bottom: 4rem;
+            }
+            &__img {
+                width: 100%;
+                height: 38.8rem;
+                margin-left: 0;
+                margin-bottom: 6.4rem;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            &-container {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                row-gap: unset;
+                column-gap: unset;
+                gap: 2.4rem;
+                width: auto;
+            }
+            &__item {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                width: auto;
+    
+                &-title {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &-right {
+            flex: unset;
+            margin-right: 0;
+    
+            &__img {
+                width: auto;
+                height: 46rem;
+                margin-right: 0;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+    
+                &::after {
+                    display: block;
+                    content: '';
+                    background: url(../img/icon/logo-circle.svg) no-repeat;
+                    background-size: contain;
+                    width: 16.8rem;
+                    height: 16.8rem;
+                    position: absolute;
+                    bottom: -8.4rem;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                }
+            }
+            &__text {
+                margin-bottom: 6rem;
+            }
+        }
+    }
+}

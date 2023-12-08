@@ -94,4 +94,27 @@ $(document).ready(function () {
       $container.toggleClass('active');
     });
   }
+
+  if ($('.information-goods').length) {
+    const tabBtn1 = document.getElementById('information-goods__tabs-btn-1');
+    const tabBtn2 = document.getElementById('information-goods__tabs-btn-2');
+    const content1 = document.getElementById('information-goods__content-1');
+    const content2 = document.getElementById('information-goods__content-2');
+
+    content1.style.display = 'block';
+
+    tabBtn1.addEventListener('change', function () {
+      if (this.checked) {
+        content1.style.display = 'flex';
+        content2.style.display = 'none';
+      }
+    });
+
+    tabBtn2.addEventListener('change', function () {
+      if (this.checked) {
+        content1.style.display = 'none';
+        content2.style.display = 'flex';
+      }
+    });
+  }
 });

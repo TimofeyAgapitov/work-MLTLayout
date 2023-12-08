@@ -1,0 +1,65 @@
+.information-goods {
+  &__logo {
+    width: 28.8rem;
+    margin-bottom: 6rem;
+  }
+  &__tabs {
+    &-title {
+      display: flex;
+      gap: 4rem;
+      margin-bottom: 3rem;
+      & > input[type='radio'] {
+        display: none;
+      }
+      & > input[type='radio'] + label {
+        color: #7c7c7c;
+        font-family: Gilroy;
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 145%; /* 34.8px */
+        text-decoration-line: underline;
+        text-underline-offset: 5px;
+        cursor: pointer;
+      }
+      & > input[type='radio']:checked + label {
+        color: #121820;
+      }
+    }
+  }
+  &__characteristic {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(124, 124, 124, 0.5);
+  }
+  &__content {
+    max-width: 69.1rem;
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+@media (max-width: 48em) {
+  .information-goods {
+    &__logo {
+      width: 36rem;
+    }
+    &__tabs {
+      &-title {
+        gap: 8rem;
+        margin-bottom: 6rem;
+        & > input[type='radio'] + label {
+          font-size: 3.6rem;
+        }
+      }
+    }
+    &__characteristic {
+      padding-bottom: 2rem;
+    }
+    &__content {
+      max-width: 100%;
+      gap: 2rem;
+    }
+  }
+}

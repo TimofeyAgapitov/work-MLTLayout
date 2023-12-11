@@ -117,4 +117,61 @@ $(document).ready(function () {
       }
     });
   }
+
+  if ($('.custom-select').length) {
+    // Получаем все блоки custom-select
+    const customSelects = document.querySelectorAll('.custom-select');
+
+    // Для каждого блока custom-select
+    customSelects.forEach((customSelect) => {
+      // Получаем чекбоксы внутри текущего блока custom-select
+      const checkboxes = customSelect.querySelectorAll(
+        '.custom-select__checkbox input[type="checkbox"]'
+      );
+
+      // Находим кнопку "сбросить" внутри текущего блока custom-select
+      const resetButton = customSelect.querySelector('.custom-select__reset');
+
+      // Добавляем обработчик для каждого чекбокса внутри текущего блока custom-select
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener('change', function () {
+          // Проверяем, выбран ли хотя бы один чекбокс
+          const anyChecked = [...checkboxes].some(
+            (checkbox) => checkbox.checked
+          );
+
+          // Показываем или скрываем кнопку "сбросить" в зависимости от состояния чекбоксов
+          resetButton.style.display = anyChecked ? 'block' : 'none';
+        });
+      });
+
+      // Добавляем обработчик для кнопки "сбросить" внутри текущего блока custom-select
+      resetButton.addEventListener('click', function () {
+        // Сбрасываем состояние всех чекбоксов внутри текущего блока custom-select
+        checkboxes.forEach((checkbox) => {
+          checkbox.checked = false;
+        });
+
+        // Скрываем кнопку "сбросить" после сброса состояния чекбоксов
+        resetButton.style.display = 'none';
+      });
+    });
+  }
+
+  if ($('.custom-select').length) {
+    // Получаем все блоки custom-select
+    const customSelects = document.querySelectorAll('.custom-select');
+
+    // Для каждого блока custom-select
+    customSelects.forEach((customSelect) => {
+      // Находим заголовок и содержимое текущего блока custom-select
+      const selectHeading = customSelect.querySelector('.custom-select__title');
+
+      // Добавляем обработчик клика на заголовок
+      selectHeading.addEventListener('click', function () {
+        // Переключаем класс active для содержимого
+        customSelect.classList.toggle('active');
+      });
+    });
+  }
 });

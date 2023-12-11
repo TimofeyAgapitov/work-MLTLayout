@@ -1,0 +1,102 @@
+.header {
+  &__item {
+    &._nested {
+      text-decoration-line: underline;
+    }
+  }
+  &__nested {
+    width: 100%;
+    min-height: 37.5rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: #121820;
+    background-color: #fff;
+    padding: 3rem 0 8rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 6rem;
+    &-panel {
+      width: 25.4rem;
+      margin-left: 5rem;
+      &-image {
+        width: 25.4rem;
+        margin-bottom: 2rem;
+      }
+      &-title {
+        color: #121820;
+        font-family: Gilroy;
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 105%;
+        margin-bottom: 1rem;
+      }
+      &-link {
+        color: #7c7c7c;
+        font-family: Gilroy;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 145%;
+        cursor: pointer;
+      }
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      &._firstList {
+        .header__nested-item {
+          width: 28rem;
+        }
+      }
+      &._secondList {
+        .header__nested-item {
+          width: 13rem;
+        }
+      }
+      &._thirdList {
+        .header__nested-item {
+          width: 24.2rem;
+        }
+      }
+    }
+    &-item {
+      color: #7c7c7c;
+      font-family: Gilroy;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 145%;
+      cursor: pointer;
+      position: relative;
+      margin-right: 4rem;
+      &._invested {
+        &::after {
+          content: '';
+          width: 0.8rem;
+          height: 1.4rem;
+          background-image: url('../img/sections/nested/nested-arrow-disactive.svg');
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          position: absolute;
+          top: 50%;
+          right: -4rem;
+          transform: translateY(-50%);
+        }
+      }
+      &:hover {
+        color: #121820;
+        &._invested {
+          &::after {
+            background-image: url('../img/sections/nested/nested-arrow-active.svg');
+          }
+        }
+      }
+    }
+  }
+}
